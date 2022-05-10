@@ -1,0 +1,51 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    multipart:
+      maxFileSize: 10MB
+      maxRequestSize: 100MB
+      # 파일 저장 경로  
+      #location: D:\upload
+    #ssl:
+        
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-54-157-79-121.compute-1.amazonaws.com:5432/ddo5stg58r18ga
+    #url: jdbc:postgresql://localhost:5432/postgres
+    username: obicnlsnpybvaz
+    #username : postgres
+    password: 69412f3041fedec36be218d10707077dbb499319f75682c608868de94ff0dc96
+    #password : postgres
+    
+  jpa:
+    database: POSTGRESQL
+    open-in-view: true
+    hibernate:
+      ddl-auto: none
+     
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+    
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      
+  logging: 
+    config: classpath:log4j2-spring.xml
+  external:
+    file:
+      ext:jpg|png|hwp
+ 
+      
