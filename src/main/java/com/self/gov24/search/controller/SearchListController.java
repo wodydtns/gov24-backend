@@ -1,7 +1,5 @@
 package com.self.gov24.search.controller;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 
 import org.springframework.data.domain.Page;
@@ -13,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.self.gov24.search.model.SearchListModel;
 import com.self.gov24.search.service.SearchListService;
+
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 public class SearchListController {

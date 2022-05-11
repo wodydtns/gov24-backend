@@ -18,6 +18,7 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+    pathmatch:      matching-strategy: ant-path-matcher
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://ec2-54-157-79-121.compute-1.amazonaws.com:5432/ddo5stg58r18ga
